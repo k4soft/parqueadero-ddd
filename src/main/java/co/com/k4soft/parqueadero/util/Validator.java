@@ -24,4 +24,23 @@ public class Validator {
             throw new BusinessException(mensaje);
         }
     }
+
+    public static void validarObjetoNulo(Object object, String mensaje) throws BusinessException {
+        if(object == null){
+            throw new BusinessException(mensaje);
+        }
+    }
+
+
+    public static void validarFechaNula(Date fecha, String mensaje) throws BusinessException {
+        if(fecha == null){
+            throw new BusinessException(mensaje);
+        }
+    }
+
+    public static void validarIgualCero(double valor, String mensaje) {
+        if(valor == 0){
+            throw new BusinessException(mensaje);
+        }
+    }
 }
